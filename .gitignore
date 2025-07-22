@@ -1,0 +1,34 @@
+# Global
+.DS_Store
+node_modules/
+.env
+.vscode/
+.idea/
+*.log
+
+# JavaScript / Node.js
+js-playwright/node_modules/
+js-playwright/test-results/
+js-playwright/.playwright/
+
+# Python
+python-playwright/__pycache__/
+python-playwright/venv/
+python-playwright/.pytest_cache/
+python-playwright/test-results/
+
+# C# / .NET
+csharp-playwright/bin/
+csharp-playwright/obj/
+csharp-playwright/.vs/
+csharp-playwright/.playwright/
+
+# Playwright reports (any language)
+**/playwright-report/
+**/test-results/
+
+# OS / Editor-specific
+*.swp
+*.swo
+Thumbs.db
+ehthumbs.db
