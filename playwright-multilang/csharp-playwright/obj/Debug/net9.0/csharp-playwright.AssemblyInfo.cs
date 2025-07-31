@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("csharp-playwright")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52c2e6ce6536ee863bb4601a9de74ed490e211f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ab26654fd28dee001bf044fa6f9237a5d37f5ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("csharp-playwright")]
 [assembly: System.Reflection.AssemblyTitleAttribute("csharp-playwright")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
