@@ -1,0 +1,222 @@
+# Playwright Learning - AI Test Generation Framework
+# Setup Requirements for External Developers
+
+## Prerequisites
+
+### 1. Required Software
+- .NET 9.0 SDK or later
+  Download: https://dotnet.microsoft.com/download
+  Verify: `dotnet --version`
+
+- Git (for version control)
+  Download: https://git-scm.com/downloads
+  Verify: `git --version`
+
+- Code Editor (recommended):
+  - Visual Studio Code: https://code.visualstudio.com/
+  - Visual Studio 2022: https://visualstudio.microsoft.com/
+  - JetBrains Rider: https://www.jetbrains.com/rider/
+
+### 2. Environment Setup
+
+#### OpenAI API Key (Required for AI Test Generation)
+1. Create an OpenAI account: https://platform.openai.com/
+2. Generate an API key: https://platform.openai.com/api-keys
+3. Set environment variable:
+
+   **macOS/Linux:**
+   ```bash
+   # Temporary (current session only)
+   export OPENAI_API_KEY="sk-your-api-key-here"
+   
+   # Permanent (add to ~/.zshrc or ~/.bashrc)
+   echo 'export OPENAI_API_KEY="sk-your-api-key-here"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
+
+   **Windows (PowerShell):**
+   ```powershell
+   # Temporary
+   $env:OPENAI_API_KEY="sk-your-api-key-here"
+   
+   # Permanent
+   setx OPENAI_API_KEY "sk-your-api-key-here"
+   ```
+
+   **Windows (Command Prompt):**
+   ```cmd
+   setx OPENAI_API_KEY "sk-your-api-key-here"
+   ```
+
+#### Verify Environment Variable
+```bash
+# macOS/Linux
+echo $OPENAI_API_KEY
+
+# Windows PowerShell
+echo $env:OPENAI_API_KEY
+
+# Windows Command Prompt
+echo %OPENAI_API_KEY%
+```
+
+### 3. Project Setup Steps
+
+#### Step 1: Clone the Repository
+```bash
+git clone <repository-url>
+cd Playwright_Learning/playwright-multilang/csharp-playwright
+```
+
+#### Step 2: Install .NET Dependencies
+```bash
+# Navigate to the C# project directory
+cd Playwright_Learning/playwright-multilang/csharp-playwright
+
+# Restore packages
+dotnet restore
+
+# Install required NuGet packages (if not already in project file)
+dotnet add package Microsoft.Playwright
+dotnet add package Microsoft.Extensions.Configuration
+dotnet add package Microsoft.Extensions.Configuration.Json
+dotnet add package Microsoft.Extensions.Configuration.EnvironmentVariables
+dotnet add package xunit
+dotnet add package xunit.runner.visualstudio
+dotnet add package Microsoft.NET.Test.Sdk
+dotnet add package Newtonsoft.Json
+```
+
+#### Step 3: Install Playwright Browsers
+```bash
+# Install Playwright browsers
+pwsh bin/Debug/net9.0/playwright.ps1 install
+
+# Or if pwsh is not available on macOS/Linux
+dotnet exec bin/Debug/net9.0/playwright.dll install
+```
+
+#### Step 4: Build the Project
+```bash
+dotnet build
+```
+
+#### Step 5: Verify Setup
+```bash
+# Run existing tests to verify everything works
+dotnet test
+
+# If successful, you should see tests running and generating AI tests (with fallback if no API key)
+```
+
+### 4. Configuration Files
+
+#### appsettings.json
+- This file is included in the repository with placeholder values
+- DO NOT modify it to include real API keys
+- The actual API key should come from environment variables only
+
+#### Expected file structure after setup:
+```
+Playwright_Learning/
+├── playwright-multilang/
+│   └── csharp-playwright/
+│       ├── Framework/
+│       │   └── AI/
+│       │       ├── AiConfig.cs
+│       │       ├── ApiContextCollector.cs
+│       │       ├── TestGenerator.cs
+│       │       └── Models/
+│       │           └── AppContextModels.cs
+│       ├── Extensions/
+│       │   └── JsonElementExtensions.cs
+│       ├── GeneratedTests/
+│       ├── appsettings.json
+│       ├── Program.cs
+│       └── csharp-playwright.csproj
+├── .gitignore
+└── SETUP_REQUIREMENTS.txt (this file)
+```
+
+### 5. Usage Examples
+
+#### Generate API Tests
+```bash
+# Generate tests for an API
+dotnet run -- "https://jsonplaceholder.typicode.com" "JSONPlaceholder API" "Test POST endpoint creates new post"
+```
+
+#### Run Generated Tests
+```bash
+# Run all tests
+dotnet test
+
+# Run only generated tests
+dotnet test --filter "FullyQualifiedName~GeneratedTests"
+```
+
+### 6. Troubleshooting
+
+#### Common Issues:
+
+**Build Errors:**
+- Ensure .NET 9.0 SDK is installed
+- Run `dotnet restore` to restore packages
+- Check that all NuGet packages are properly installed
+
+**API Key Issues:**
+- Verify environment variable is set correctly (no extra quotes/spaces)
+- Restart terminal/IDE after setting environment variables
+- Test with: `echo $OPENAI_API_KEY` (macOS/Linux) or `echo %OPENAI_API_KEY%` (Windows)
+
+**Playwright Browser Issues:**
+- Run `playwright install` to download browsers
+- On Linux, may need additional dependencies: `playwright install-deps`
+
+**Test Discovery Issues:**
+- Ensure test classes are public
+- Verify [Fact] attributes are present
+- Check namespaces match project namespace
+
+#### Getting Help:
+1. Check console output for detailed error messages
+2. Verify all prerequisites are met
+3. Ensure environment variables are set correctly
+4. Review the generated test files in `GeneratedTests/` folder
+
+### 7. Security Best Practices
+
+#### DO:
+- Set API keys via environment variables only
+- Add sensitive files to .gitignore
+- Use different API keys for development vs production
+- Regularly rotate API keys
+
+#### DON'T:
+- Commit API keys to version control
+- Share API keys in plain text
+- Use production API keys for development
+- Commit appsettings files with real credentials
+
+### 8. Optional Configuration
+
+#### Environment Variables (all optional except OPENAI_API_KEY):
+- `OPENAI_API_KEY` - Your OpenAI API key (REQUIRED)
+- `OPENAI_MODEL` - Model to use (default: "gpt-4")
+- `OPENAI_MAX_TOKENS` - Max tokens per response (default: 4000)
+- `OPENAI_TEMPERATURE` - Creativity level 0-1 (default: 0.7)
+- `OPENAI_PROMPT_TEMPLATE` - Custom prompt template
+
+### 9. IDE Extensions (Recommended)
+
+#### Visual Studio Code:
+- C# Dev Kit
+- Playwright Test for VSCode
+- GitLens
+
+#### Visual Studio:
+- Playwright Test adapter (if available)
+
+---
+
+For questions or issues, please refer to the project documentation or create an issue in the repository.

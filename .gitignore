@@ -2,9 +2,25 @@
 .DS_Store
 node_modules/
 .env
+.env.local
+.env.production
+.env.development
 .vscode/
 .idea/
 *.log
+
+# API Keys and Sensitive Information
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Local.json
+secrets.json
+**/secrets/
+**/*.key
+**/*.pem
+**/*.p12
+**/*.pfx
+**/config/local.*
+**/config/prod.*
 
 # JavaScript / Node.js
 js-playwright/node_modules/
@@ -22,13 +38,35 @@ csharp-playwright/bin/
 csharp-playwright/obj/
 csharp-playwright/.vs/
 csharp-playwright/.playwright/
+csharp-playwright/Properties/launchSettings.json
+
+# AI Generated Tests (optional - uncomment if you don't want to commit generated tests)
+# **/GeneratedTests/
+# **/*generated*.cs
+# **/*ai-generated*.cs
 
 # Playwright reports (any language)
 **/playwright-report/
 **/test-results/
+
+# Temporary files and logs
+**/logs/
+**/temp/
+**/tmp/
+**/*.tmp
+**/*.temp
+**/*.cache
 
 # OS / Editor-specific
 *.swp
 *.swo
 Thumbs.db
 ehthumbs.db
+*~
+.#*
+
+# Package manager files
+**/package-lock.json.bak
+**/yarn-error.log
+**/npm-debug.log*
+**/yarn-debug.log*
