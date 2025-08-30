@@ -1,6 +1,8 @@
 using Microsoft.Playwright;
 using Xunit;
 using System.Threading.Tasks;
+using csharp_playwright.Extensions;
+using System.Text.Json;
 
 public class ApiTests
 {
@@ -12,9 +14,10 @@ public class ApiTests
         var response = await requestContext.GetAsync("https://jsonplaceholder.typicode.com/posts/1");
         Assert.Equal(200, response.Status);
         
-        var json = await response.JsonAsync();
-        Assert.Equal(1, json?.Value<int>("id"));
-        Assert.Equal(1, json?.Value<int>("userId"));
-        Assert.True(json?.ContainsKey("title"));
+        var jsonElement = await response.JsonAsync();
+        JsonElement? json = jsonElement;
+        Assert.Equal(1, json.Value<int>("id"));
+        Assert.Equal(1, json.Value<int>("userId"));
+        Assert.True(json.ContainsKey("title"));
     }
 }
