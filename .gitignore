@@ -49,6 +49,24 @@ csharp-playwright/Properties/launchSettings.json
 **/playwright-report/
 **/test-results/
 
+# Playwright browsers and binaries (ALL languages) - IMPORTANT: These can be 100MB+
+**/.playwright/
+**/playwright-browsers/
+**/bin/*/.playwright/
+**/bin/**/.playwright/
+**/Debug/*/.playwright/
+**/Release/*/.playwright/
+**/venv/lib/python*/site-packages/playwright/driver/
+**/node_modules/playwright*/
+playwright-*/
+
+# Large binary files that shouldn't be in repo
+**/*.exe
+**/*.dmg
+**/*.pkg
+**/*.deb
+**/*.rpm
+
 # Temporary files and logs
 **/logs/
 **/temp/
