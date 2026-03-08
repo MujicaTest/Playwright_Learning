@@ -8,6 +8,10 @@ node_modules/
 .vscode/
 .idea/
 *.log
+*.tmp
+.cache/
+.temp/
+temp/
 
 # API Keys and Sensitive Information
 appsettings.Development.json
@@ -21,11 +25,27 @@ secrets.json
 **/*.pfx
 **/config/local.*
 **/config/prod.*
+auth-tokens.json
+oauth-config.json
 
 # JavaScript / Node.js
 js-playwright/node_modules/
 js-playwright/test-results/
 js-playwright/.playwright/
+
+# TypeScript / Playwright
+Playwright-Typescript/node_modules/
+Playwright-Typescript/test-results/
+Playwright-Typescript/playwright-report/
+Playwright-Typescript/.playwright/
+Playwright-Typescript/coverage/
+Playwright-Typescript/dist/
+Playwright-Typescript/build/
+Playwright-Typescript/*.tsbuildinfo
+Playwright-Typescript/debug-logs/
+Playwright-Typescript/screenshots/
+Playwright-Typescript/videos/
+Playwright-Typescript/traces/
 
 # Python
 python-playwright/__pycache__/
@@ -45,9 +65,34 @@ csharp-playwright/Properties/launchSettings.json
 # **/*generated*.cs
 # **/*ai-generated*.cs
 
-# Playwright reports (any language)
+# Playwright reports and artifacts (any language)
 **/playwright-report/
 **/test-results/
+**/playwright/.cache/
+**/traces/
+**/screenshots/
+**/videos/
+**/downloads/
+
+# Test artifacts and debugging
+**/debug.log
+**/error.log
+**/test-debug-*
+**/playwright-debug-*
+**/auth-state.json
+**/storage-state.json
+
+# Coverage and profiling
+**/coverage/
+**/nyc_output/
+**/.coverage
+**/htmlcov/
+
+# IDE and editor files
+**/.vscode/settings.json
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/vscode-test/
 
 # Playwright browsers and binaries (ALL languages) - IMPORTANT: These can be 100MB+
 **/.playwright/
