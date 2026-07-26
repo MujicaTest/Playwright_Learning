@@ -1,0 +1,575 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "graphify_command_suite",
+        "label": "Graphify Command Suite",
+        "nodes": [
+          "_github_copilot_instructions_graphify_query",
+          "_github_copilot_instructions_graphify_path",
+          "_github_copilot_instructions_graphify_explain"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1,
+        "source_file": ".github/copilot-instructions.md"
+      },
+      {
+        "id": "readme_feature_set",
+        "label": "Project Feature Set",
+        "nodes": [
+          "readme_multilanguage_playwright_testing",
+          "readme_ai_test_generation",
+          "readme_api_discovery",
+          "readme_security_first",
+          "readme_fallback_support"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1,
+        "source_file": "README.md"
+      },
+      {
+        "id": "setup_ai_testing_workflow",
+        "label": "AI Test Generation Setup Workflow",
+        "nodes": [
+          "setup_requirements_openai_api_key",
+          "setup_requirements_environment_variables",
+          "setup_requirements_csharp_ai_framework",
+          "setup_requirements_generated_tests"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1,
+        "source_file": "SETUP_REQUIREMENTS.txt"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "Playwright_Learning.sln",
+      "file_type": "code",
+      "source_file": "Playwright_Learning.sln",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "playwright_learning",
+      "community": 3,
+      "norm_label": "playwright_learning.sln"
+    },
+    {
+      "label": "playwright-multilang",
+      "file_type": "code",
+      "source_file": "playwright-multilang",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "playwright_multilang",
+      "community": 3,
+      "norm_label": "playwright-multilang"
+    },
+    {
+      "label": "csharp-playwright",
+      "file_type": "code",
+      "source_file": "playwright-multilang/csharp-playwright/csharp-playwright.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "playwright_multilang_csharp_playwright_csharp_playwright",
+      "community": 3,
+      "norm_label": "csharp-playwright"
+    },
+    {
+      "label": "setup.sh",
+      "file_type": "code",
+      "source_file": "setup.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "setup",
+      "community": 5,
+      "norm_label": "setup.sh"
+    },
+    {
+      "label": "setup.sh script",
+      "file_type": "code",
+      "source_file": "setup.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "setup_sh__entry",
+      "community": 5,
+      "norm_label": "setup.sh script"
+    },
+    {
+      "label": "Graphify Guidance",
+      "file_type": "concept",
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Use graphify queries first for repository architecture and relationship questions because they return scoped subgraphs smaller than broad reports or raw text search output.",
+      "id": "_github_copilot_instructions_graphify",
+      "community": 1,
+      "norm_label": "graphify guidance"
+    },
+    {
+      "label": "Graphify Query Command",
+      "file_type": "concept",
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_github_copilot_instructions_graphify_query",
+      "community": 1,
+      "norm_label": "graphify query command"
+    },
+    {
+      "label": "Graphify Path Command",
+      "file_type": "concept",
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_github_copilot_instructions_graphify_path",
+      "community": 1,
+      "norm_label": "graphify path command"
+    },
+    {
+      "label": "Graphify Explain Command",
+      "file_type": "concept",
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_github_copilot_instructions_graphify_explain",
+      "community": 1,
+      "norm_label": "graphify explain command"
+    },
+    {
+      "label": "Playwright Multi-language Demo with AI Test Generation",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_project",
+      "community": 4,
+      "norm_label": "playwright multi-language demo with ai test generation"
+    },
+    {
+      "label": "Multi-language Playwright Testing",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_multilanguage_playwright_testing",
+      "community": 4,
+      "norm_label": "multi-language playwright testing"
+    },
+    {
+      "label": "AI Test Generation",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_ai_test_generation",
+      "community": 0,
+      "norm_label": "ai test generation"
+    },
+    {
+      "label": "API Discovery",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_api_discovery",
+      "community": 0,
+      "norm_label": "api discovery"
+    },
+    {
+      "label": "Security-First",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "API keys should not be stored in the repository and should be supplied through environment variables instead.",
+      "id": "readme_security_first",
+      "community": 0,
+      "norm_label": "security-first"
+    },
+    {
+      "label": "Fallback Support",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_fallback_support",
+      "community": 2,
+      "norm_label": "fallback support"
+    },
+    {
+      "label": "Setup Requirements Guide",
+      "file_type": "document",
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "setup_requirements_setup_guide",
+      "community": 2,
+      "norm_label": "setup requirements guide"
+    },
+    {
+      "label": "OpenAI API Key",
+      "file_type": "concept",
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "setup_requirements_openai_api_key",
+      "community": 0,
+      "norm_label": "openai api key"
+    },
+    {
+      "label": "Environment Variables",
+      "file_type": "concept",
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "setup_requirements_environment_variables",
+      "community": 0,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "C# AI Test Generation Framework",
+      "file_type": "concept",
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "setup_requirements_csharp_ai_framework",
+      "community": 2,
+      "norm_label": "c# ai test generation framework"
+    },
+    {
+      "label": "Generated Tests",
+      "file_type": "concept",
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "setup_requirements_generated_tests",
+      "community": 2,
+      "norm_label": "generated tests"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Playwright_Learning.sln",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "playwright_learning",
+      "target": "playwright_multilang",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Playwright_Learning.sln",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "playwright_learning",
+      "target": "playwright_multilang_csharp_playwright_csharp_playwright",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setup.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "setup",
+      "target": "setup_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_github_copilot_instructions_graphify",
+      "target": "_github_copilot_instructions_graphify_explain"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_github_copilot_instructions_graphify",
+      "target": "_github_copilot_instructions_graphify_path"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "_github_copilot_instructions_graphify",
+      "target": "_github_copilot_instructions_graphify_query"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_project",
+      "target": "readme_ai_test_generation"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_project",
+      "target": "readme_multilanguage_playwright_testing"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_project",
+      "target": "setup_requirements_setup_guide"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_ai_test_generation",
+      "target": "readme_api_discovery"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_ai_test_generation",
+      "target": "readme_fallback_support"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_ai_test_generation",
+      "target": "readme_security_first"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_ai_test_generation",
+      "target": "setup_requirements_csharp_ai_framework"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_ai_test_generation",
+      "target": "setup_requirements_openai_api_key"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "setup_requirements_environment_variables",
+      "target": "readme_security_first"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.2,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_fallback_support",
+      "target": "setup_requirements_generated_tests"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "setup_requirements_setup_guide",
+      "target": "setup_requirements_csharp_ai_framework"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "setup_requirements_setup_guide",
+      "target": "setup_requirements_environment_variables"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "setup_requirements_setup_guide",
+      "target": "setup_requirements_generated_tests"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "setup_requirements_setup_guide",
+      "target": "setup_requirements_openai_api_key"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "setup_requirements_openai_api_key",
+      "target": "setup_requirements_environment_variables"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SETUP_REQUIREMENTS.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "setup_requirements_csharp_ai_framework",
+      "target": "setup_requirements_generated_tests"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "graphify_command_suite",
+      "label": "Graphify Command Suite",
+      "nodes": [
+        "_github_copilot_instructions_graphify_query",
+        "_github_copilot_instructions_graphify_path",
+        "_github_copilot_instructions_graphify_explain"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": ".github/copilot-instructions.md"
+    },
+    {
+      "id": "readme_feature_set",
+      "label": "Project Feature Set",
+      "nodes": [
+        "readme_multilanguage_playwright_testing",
+        "readme_ai_test_generation",
+        "readme_api_discovery",
+        "readme_security_first",
+        "readme_fallback_support"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md"
+    },
+    {
+      "id": "setup_ai_testing_workflow",
+      "label": "AI Test Generation Setup Workflow",
+      "nodes": [
+        "setup_requirements_openai_api_key",
+        "setup_requirements_environment_variables",
+        "setup_requirements_csharp_ai_framework",
+        "setup_requirements_generated_tests"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "SETUP_REQUIREMENTS.txt"
+    }
+  ],
+  "built_at_commit": "e9bce6d773c6679223e510432b86abe653252420"
+}

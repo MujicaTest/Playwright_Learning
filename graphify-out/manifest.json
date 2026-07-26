@@ -1,0 +1,27 @@
+{
+  "Playwright_Learning.sln": {
+    "mtime": 1753160039.1264653,
+    "ast_hash": "a7eda7a8b17d3ca72638374db26f2af6",
+    "semantic_hash": "a7eda7a8b17d3ca72638374db26f2af6"
+  },
+  "setup.sh": {
+    "mtime": 1756559116.2489836,
+    "ast_hash": "e0817738f9167b80388d6dd0c0c24422",
+    "semantic_hash": "e0817738f9167b80388d6dd0c0c24422"
+  },
+  ".github/copilot-instructions.md": {
+    "mtime": 1785094910.3523924,
+    "ast_hash": "ec2dc0dc7bef63488889f34de2f5584d",
+    "semantic_hash": "ec2dc0dc7bef63488889f34de2f5584d"
+  },
+  "README.md": {
+    "mtime": 1756559116.2608557,
+    "ast_hash": "57b910a60b38a869c6042e3d35516939",
+    "semantic_hash": "57b910a60b38a869c6042e3d35516939"
+  },
+  "SETUP_REQUIREMENTS.txt": {
+    "mtime": 1756559116.2488194,
+    "ast_hash": "20eeb85d021a3b1b9e2441dd3aaa3516",
+    "semantic_hash": "20eeb85d021a3b1b9e2441dd3aaa3516"
+  }
+}
